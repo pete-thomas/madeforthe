@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peter Thomas — CV</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%234138ff%22></rect><path fill=%22%23fff%22 d=%22%22></path></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #4138ff;
+      --slate:  #4A5568;
+      --muted:  #8896A5;
+      --rule:   #DDE3EA;
+      --bg:     #FFFFFF;
+      --text:   #1A1A1A;
+      --accent: #4138ff;
+      --sans:   'Inter', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+    html { font-size: 15px; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ── Layout ─────────────────────────────────────────────────────────── */
+    .page {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 0;
+    }
+
+    /* ── Header (full width) ─────────────────────────────────────────────── */
+    .header {
+      grid-column: 1 / -1;
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .header-name h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .header-name .title {
+      font-size: 1rem;
+      color: var(--slate);
+      font-weight: 400;
+      margin-top: 6px;
+    }
+
+    .header-contact {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .header-contact a { color: var(--muted); }
+    .header-contact a:hover { color: var(--accent); }
+
+    /* ── Sidebar ─────────────────────────────────────────────────────────── */
+    .sidebar {
+      padding-right: 48px;
+      padding-top: 4px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 36px;
+    }
+
+    .label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .sidebar p,
+    .sidebar ul {
+      font-size: 0.82rem;
+      color: var(--slate);
+      line-height: 1.85;
+      list-style: none;
+    }
+
+    .principles {
+      font-size: 0.82rem;
+      color: var(--slate);
+      line-height: 1.75;
+    }
+
+    .principles p {
+      margin-bottom: 8px;
+    }
+
+    .principles p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Main content ────────────────────────────────────────────────────── */
+    .main {
+      padding-left: 48px;
+      border-left: 1px solid var(--rule);
+    }
+
+    .summary {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--slate);
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    /* ── Section ─────────────────────────────────────────────────────────── */
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    /* ── Job entry ───────────────────────────────────────────────────────── */
+    .job {
+      margin-bottom: 36px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+      gap: 16px;
+    }
+
+    .job-title {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .job-date {
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .job-company {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .job-intro {
+      font-size: 0.85rem;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job ul li {
+      font-size: 0.85rem;
+      color: var(--slate);
+      line-height: 1.7;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    .job ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    /* ── Earlier experience ──────────────────────────────────────────────── */
+    .earlier {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .earlier p {
+      font-size: 0.83rem;
+      color: var(--slate);
+      line-height: 1.75;
+    }
+
+    /* ── Skills section (in main) ────────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 32px;
+      margin-bottom: 40px;
+    }
+
+    .skill-row {
+      font-size: 0.83rem;
+      color: var(--slate);
+      line-height: 1.8;
+      padding: 3px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .skill-row strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* ── Print ───────────────────────────────────────────────────────────── */
+    @media print {
+      @page {
+        margin: 16mm 16mm 16mm 16mm;
+        size: A4;
+      }
+
+      html { font-size: 12px; }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        max-width: 100%;
+        padding: 0;
+        grid-template-columns: 180px 1fr;
+      }
+
+      /* Keep sidebar and main side by side — never collapse */
+      .sidebar {
+        padding-right: 32px;
+      }
+
+      .main {
+        padding-left: 32px;
+      }
+
+      /* Prevent awkward breaks inside a job entry */
+      .job {
+        break-inside: avoid;
+      }
+
+      /* Avoid a heading stranded at the bottom of a page */
+      .section-label,
+      .label {
+        break-after: avoid;
+      }
+
+      /* Links print as plain text */
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      /* Hide hover states */
+      a:hover { color: inherit; }
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+      }
+      .header { flex-direction: column; align-items: flex-start; }
+      .header-contact { text-align: left; }
+      .sidebar { padding-right: 0; padding-bottom: 40px; border-bottom: 1px solid var(--rule); }
+      .main { padding-left: 0; border-left: none; border-top: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ── Header ─────────────────────────────────────────────────────────── -->
+    <header class="header">
+      <div class="header-name">
+        <h1>Peter Thomas</h1>
+        <p class="title">Director of Product Design</p>
+      </div>
+      <div class="header-contact">
+        <a href="mailto:contact.petethomas@gmail.com">contact.petethomas@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/peter--thomas">linkedin.com/in/peter--thomas</a><br>
+        London, United Kingdom
+      </div>
+    </header>
+
+    <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <span class="label">Currently</span>
+        <ul>
+          <li>AI-native design workflows</li>
+          <li>Building curious, high-trust design teams</li>
+          <li>The role of design in complex technical products</li>
+          <li>How AI changes the shape of design</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="label">Principles</span>
+        <div class="principles">
+          <p>Great design comes from curious people working on genuinely hard problems together.</p>
+          <p>Design teams earn trust through delivery. Trust, over time, opens the doors that matter.</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="label">Skills</span>
+        <ul>
+          <li>Org design</li>
+          <li>Experience strategy</li>
+          <li>Data visualisation</li>
+          <li>AI-first product design</li>
+          <li>Security &amp; network products</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="label">Education</span>
+        <p>
+          Bournemouth University<br>
+          Media School<br>
+          BA (Hons)<br>
+          Interactive Media Production<br>
+          2003 – 2007
+        </p>
+      </div>
+
+    </aside>
+
+    <!-- ── Main ───────────────────────────────────────────────────────────── -->
+    <main class="main">
+
+      <p class="summary">
+        I've spent 8 years at Cloudflare growing from Lead Designer to Director, long enough to have built products, built teams, and figured out what actually makes design organisations work. Currently I'm directing Cloudflare's product design team across Security and Performance.
+        Over the past 6 months I've been moving the team from AI-curious to AI-native, helping to build
+        the processes and culture to get the whole team shipping with AI-assisted workflows.
+        Passionate about building high-performing design teams and creating the conditions for designers to do the best work of their careers.
+      </p>
+
+      <span class="section-label">Experience</span>
+
+      <!-- Cloudflare -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Director of Product Design</span>
+          <span class="job-date">Apr 2025 – Present</span>
+        </div>
+        <div class="job-company"><a href="https://www.cloudflare.com" target="_blank">Cloudflare</a></div>
+        <ul>
+          <li>Own design direction across Security and Performance, Cloudflare's highest-revenue product portfolio areas, used by millions of customers globally.</li>
+          <li>Lead a globally distributed team of 11, including a product design manager, across multiple time zones, setting direction, developing designers and managers, and driving collaborative and curious design culture.</li>
+          <li>Partner with VP-level stakeholders to define and execute design and product strategy, integrating AI-assisted workflows into designer tooling and customer experiences.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Senior Product Design Manager</span>
+          <span class="job-date">Apr 2023 – Apr 2025</span>
+        </div>
+        <div class="job-company"><a href="https://www.cloudflare.com" target="_blank">Cloudflare</a></div>
+        <ul>
+          <li>Managed a team of 7 product designers across the Security, Performance and Analytics portfolios.</li>
+          <li>Recruited and onboarded multiple senior designers, growing the team's capability in technical design, data visualisation, and enterprise UX.</li>
+          <li>Worked on strategy for re-design of core UX for application security products resulting in consolidation and simplification of complex user journeys and improved adoption of key features.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Product Design Manager</span>
+          <span class="job-date">Jul 2020 – Apr 2023</span>
+        </div>
+        <div class="job-company"><a href="https://www.cloudflare.com" target="_blank">Cloudflare</a></div>
+        <ul>
+          <li>Led design for the Security, Performance, and Analytics groups, managing a team of 5 designers.</li>
+          <li>Established user-centred design and planning processes to move design to supporting the end-to-end product development lifecycle.</li>
+          <li>Championed cross-functional collaboration between design, product, and engineering, ensuring design was embedded from strategy through to delivery.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Lead Product Designer</span>
+          <span class="job-date">Jan 2019 – Jul 2020</span>
+        </div>
+        <div class="job-company"><a href="https://www.cloudflare.com" target="_blank">Cloudflare</a></div>
+        <ul>
+          <li>Led the ground-up redesign of the Cloudflare WAF, a flagship security product, resulting in significantly improved navigation and user experience.</li>
+          <li>Created Cloudflare's Firewall Events and Analytics platforms from 0–1, establishing new UX patterns for how security teams monitor and respond to threats at scale.</li>
+          <li>Mentored junior and mid-level designers, establishing a culture of craft, feedback, and iterative improvement.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Senior Product Designer</span>
+          <span class="job-date">Apr 2018 – Jan 2019</span>
+        </div>
+        <div class="job-company"><a href="https://www.cloudflare.com" target="_blank">Cloudflare</a></div>
+        <ul>
+          <li>Embedded in Cloudflare's security platform, designing across new feature development and platform UX improvements.</li>
+          <li>Re-levelled to Lead within 10 months to establish and lead Cloudflare's first London-based design team, following hands-on product design work on the core security rules system.</li>
+        </ul>
+      </div>
+
+      <!-- Geckoboard -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Product Design Lead</span>
+          <span class="job-date">Sep 2013 – Apr 2018</span>
+        </div>
+        <div class="job-company"><a href="https://www.geckoboard.com" target="_blank">Geckoboard</a></div>
+        <p class="job-intro">Joined as the sole designer, grew the team, and shaped the design function over 4.5 years at a SaaS dashboarding tool used by thousands of businesses.</p>
+        <ul>
+          <li>Owned end-to-end product design: discovery, IA, interaction design, prototyping, visual design, and handoff across web and mobile.</li>
+          <li>Built and managed the design team: recruitment, onboarding, performance, and mentorship.</li>
+          <li>Established the company's first user-centred design process, embedding research, prototyping, and iterative testing into day-to-day delivery.</li>
+          <li>Designed the core data visualisation and dashboard building experience, supporting complex multi-source data integrations.</li>
+        </ul>
+      </div>
+
+      <!-- Huddle -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Product Designer</span>
+          <span class="job-date">Jul 2012 – Sep 2013</span>
+        </div>
+        <div class="job-company"><a href="https://www.huddle.com" target="_blank">Huddle</a></div>
+        <ul>
+          <li>Designed core functionality and new features for an enterprise document collaboration platform (web and mobile).</li>
+          <li>Contributed to the definition and iteration of a refreshed visual language and component documentation.</li>
+        </ul>
+      </div>
+
+      <!-- Earlier -->
+      <div class="earlier">
+        <span class="label">Earlier Experience</span>
+        <p>Clinic (2011–12), Session Digital (2010–11), Leftfield Digital (2009–10), Freelance (2008–09) — UI/UX design for agency clients including Capcom, CBS, Turner Media, Arsenal FC, Interflora, Alibaba, and Warner Music Group. Developed a strong craft foundation across interaction design, visual systems, and HTML/CSS prototyping.</p>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
