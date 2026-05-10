@@ -9,7 +9,7 @@
   <title>Peter Thomas, Design Leader</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%234138ff%22></rect><path fill=%22%23fff%22 d=%22%22></path></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
   <script is:inline src="https://cdn.tailwindcss.com"></script>
   <script is:inline>
     tailwind.config = {
@@ -17,15 +17,15 @@
       theme: {
         extend: {
           colors: {
-            bg:    '#FBFAF6',
+            bg:    '#FFFFFF',
             ink:   '#1A1A1A',
             muted: '#93908B',
             rule:  '#DAD9D2',
             navy:  '#4137FF',
           },
           fontFamily: {
-            sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['Geist', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            mono: ['Geist Mono', 'monospace'],
           },
         }
       }
@@ -44,30 +44,27 @@
     .animate-ping { animation-duration: 2s; }
   </style>
 </head>
-<body class="bg-[#FBFAF6] dark:bg-[#141413] text-[#1A1A1A] dark:text-[#D4D4D0] font-sans antialiased transition-colors duration-200">
+<body class="bg-[#f2f2f2] dark:bg-[#141413] text-[#1A1A1A] dark:text-[#D4D4D0] font-sans antialiased transition-colors duration-200">
 
   <!-- Nav -->
   <nav class="flex justify-between items-center py-7 px-6 md:px-12">
-    <span class="text-sm font-medium flex items-center gap-2">
-      <span class="relative flex items-center justify-center w-2 h-2 shrink-0">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy opacity-60"></span>
-        <span class="relative inline-flex w-2 h-2 rounded-full bg-navy"></span>
-      </span>
+    <span class="text-base font-medium flex items-center gap-2">
+      <canvas id="blob" width="60" height="60" class="shrink-0" style="width:26px;height:26px"></canvas>
       Peter Thomas
     </span>
     <div class="flex items-center gap-6 md:gap-8 text-sm text-[#93908B]">
-      <a href="#about"      class="hidden md:block hover:text-navy transition-colors duration-150">About</a>
-      <a href="#experience" class="hidden md:block hover:text-navy transition-colors duration-150">Experience</a>
-      <a href="mailto:contact.petethomas@gmail.com" class="hover:text-navy transition-colors duration-150">Say hello</a>
+      <a href="#about"      class="hidden md:block hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-150">About</a>
+      <a href="#experience" class="hidden md:block hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-150">Experience</a>
+      <a href="mailto:contact.petethomas@gmail.com" class="group/hello inline-flex items-center gap-1.5 hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-150">Say hello<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-3.5 h-3.5 opacity-0 group-hover/hello:opacity-100 transition-opacity duration-150"><path d="M220.17,100,202.86,70a28,28,0,0,0-38.24-10.25,27.69,27.69,0,0,0-9,8.34L138.2,38a28,28,0,0,0-48.48,0A28,28,0,0,0,48.15,74l1.59,2.76A27.67,27.67,0,0,0,38,80.41a28,28,0,0,0-10.24,38.25l40,69.32a87.47,87.47,0,0,0,53.43,41,88.56,88.56,0,0,0,22.92,3,88,88,0,0,0,76.06-132Zm-6.66,62.64A72,72,0,0,1,81.62,180l-40-69.32a12,12,0,0,1,20.78-12L81.63,132a8,8,0,1,0,13.85-8L62,66A12,12,0,1,1,82.78,54L114,108a8,8,0,1,0,13.85-8L103.57,58h0a12,12,0,1,1,20.78-12l33.42,57.9a48,48,0,0,0-5.54,60.6,8,8,0,0,0,13.24-9A32,32,0,0,1,172.78,112a8,8,0,0,0,2.13-10.4L168.23,90A12,12,0,1,1,189,78l17.31,30A71.56,71.56,0,0,1,213.51,162.62ZM184.25,31.71A8,8,0,0,1,194,26a59.62,59.62,0,0,1,36.53,28l.33.57a8,8,0,1,1-13.85,8l-.33-.57a43.67,43.67,0,0,0-26.8-20.5A8,8,0,0,1,184.25,31.71ZM80.89,237a8,8,0,0,1-11.23,1.33A119.56,119.56,0,0,1,40.06,204a8,8,0,0,1,13.86-8,103.67,103.67,0,0,0,25.64,29.72A8,8,0,0,1,80.89,237Z"/></svg></a>
       <!-- Theme toggle -->
-      <button id="theme-toggle" aria-label="Toggle dark mode" class="w-7 h-7 flex items-center justify-center rounded hover:text-navy transition-colors duration-150">
+      <button id="theme-toggle" aria-label="Toggle dark mode" class="w-7 h-7 flex items-center justify-center rounded-full hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] transition-colors duration-150">
         <!-- Sun (shown in dark mode) -->
-        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 hidden">
-          <path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2ZM10 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15ZM10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM15.657 5.404a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM6.464 14.596a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10ZM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10ZM14.596 15.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06ZM5.404 6.464a.75.75 0 0 0 1.06-1.06L5.404 4.343a.75.75 0 1 0-1.06 1.06l1.06 1.061Z" />
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-4 h-4 hidden">
+          <path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z" />
         </svg>
         <!-- Moon (shown in light mode) -->
-        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
-          <path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z" clip-rule="evenodd" />
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-4 h-4">
+          <path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z" />
         </svg>
       </button>
     </div>
@@ -75,7 +72,7 @@
 
   <!-- Hero -->
   <div class="pt-20 pb-24 px-6 md:px-12 max-w-5xl">
-    <p class="text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-7">Design leader · London</p>
+    <p class="text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-7 inline-flex items-center gap-1.5">Design leader · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-3 h-3 shrink-0"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.63,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg>London</p>
     <h1 class="hero-title font-semibold mb-9">
       Building teams that do<br>their <span class="text-navy">best work.</span>
     </h1>
@@ -122,66 +119,77 @@
   <!-- Experience -->
   <section id="experience" class="py-20 px-6 md:px-12">
     <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-10">Experience</span>
-    <div class="max-w-5xl divide-y divide-[#DAD9D2] dark:divide-[#2A2A28]">
+    <div class="max-w-5xl">
 
-      <div class="py-8 flex gap-8 group">
-        <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center mt-0.5">
-          <img src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=64" alt="Cloudflare" class="w-4 h-4 object-contain">
+      <div class="flex gap-6">
+        <div class="flex flex-col items-center shrink-0">
+          <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center shadow-[0_1px_2px_0_#0000000d]">
+            <img src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=64" alt="Cloudflare" class="w-4 h-4 object-contain">
+          </div>
+          <div class="w-px flex-1 bg-[#DAD9D2] dark:bg-[#2A2A28] my-3"></div>
         </div>
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 pb-8">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Director of Product Design</div>
             <div class="text-xs text-[#93908B] shrink-0 font-mono">2025 – Present</div>
           </div>
-          <a href="https://www.cloudflare.com" target="_blank" class="text-xs font-semibold tracking-widest uppercase text-[#c44800] hover:opacity-80 transition-opacity duration-150 mb-3 block">Cloudflare</a>
+          <a href="https://www.cloudflare.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#c44800] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Cloudflare<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
           <p class="text-sm text-[#93908B] leading-relaxed">Leading design across Security and Performance, Cloudflare's highest-revenue portfolio. A global team of 11, VP-level partnerships, and an organisation-wide shift to AI-native design practice.</p>
         </div>
       </div>
 
-      <div class="py-8 flex gap-8 group">
-        <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center mt-0.5">
-          <img src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=64" alt="Cloudflare" class="w-4 h-4 object-contain">
+      <div class="flex gap-6">
+        <div class="flex flex-col items-center shrink-0">
+          <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center shadow-[0_1px_2px_0_#0000000d]">
+            <img src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=64" alt="Cloudflare" class="w-4 h-4 object-contain">
+          </div>
+          <div class="w-px flex-1 bg-[#DAD9D2] dark:bg-[#2A2A28] my-3"></div>
         </div>
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 pb-8">
           <div class="flex items-baseline justify-between gap-4 mb-1">
-            <div class="text-base font-semibold leading-snug">Design Lead → Senior Design Manager</div>
+            <div class="text-base font-semibold leading-snug">Design Lead <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="inline-block w-3 h-3 align-middle"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg> Senior Design Manager</div>
             <div class="text-xs text-[#93908B] shrink-0 font-mono">2019 – 2025</div>
           </div>
-          <a href="https://www.cloudflare.com" target="_blank" class="text-xs font-semibold tracking-widest uppercase text-[#c44800] hover:opacity-80 transition-opacity duration-150 mb-3 block">Cloudflare</a>
+          <a href="https://www.cloudflare.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#c44800] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Cloudflare<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
           <p class="text-sm text-[#93908B] leading-relaxed">Built and scaled the London design team from the ground up. Led design across Security, Performance, and Analytics. Shipped the WAF redesign, Firewall Events, and Analytics platforms from 0–1.</p>
         </div>
       </div>
 
-      <div class="py-8 flex gap-8 group">
-        <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center mt-0.5">
-          <img src="https://www.google.com/s2/favicons?domain=geckoboard.com&sz=64" alt="Geckoboard" class="w-full h-full object-contain">
+      <div class="flex gap-6">
+        <div class="flex flex-col items-center shrink-0">
+          <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center shadow-[0_1px_2px_0_#0000000d]">
+            <img src="https://www.google.com/s2/favicons?domain=geckoboard.com&sz=64" alt="Geckoboard" class="w-full h-full object-contain">
+          </div>
+          <div class="w-px flex-1 bg-[#DAD9D2] dark:bg-[#2A2A28] my-3"></div>
         </div>
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 pb-8">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Product Design Lead</div>
             <div class="text-xs text-[#93908B] shrink-0 font-mono">2013 – 2018</div>
           </div>
-          <a href="https://www.geckoboard.com" target="_blank" class="text-xs font-semibold tracking-widest uppercase text-[#1a7a2e] hover:opacity-80 transition-opacity duration-150 mb-3 block">Geckoboard</a>
+          <a href="https://www.geckoboard.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#1a7a2e] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Geckoboard<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
           <p class="text-sm text-[#93908B] leading-relaxed">Joined as the sole designer and shaped the design function over 4.5 years at a SaaS dashboarding tool used by thousands of businesses. Owned end-to-end product design across web and mobile.</p>
         </div>
       </div>
 
-      <div class="py-8 flex gap-8 group">
-        <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center mt-0.5">
-          <img src="https://www.google.com/s2/favicons?domain=huddle.com&sz=64" alt="Huddle" class="w-full h-full object-contain">
+      <div class="flex gap-6">
+        <div class="flex flex-col items-center shrink-0">
+          <div class="w-8 h-8 rounded-full overflow-hidden bg-white dark:bg-[#2A2A28] border border-[#DAD9D2] dark:border-[#3A3A38] shrink-0 flex items-center justify-center shadow-[0_1px_2px_0_#0000000d]">
+            <img src="https://www.google.com/s2/favicons?domain=huddle.com&sz=64" alt="Huddle" class="w-full h-full object-contain">
+          </div>
         </div>
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 pb-4">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Product Designer</div>
             <div class="text-xs text-[#93908B] shrink-0 font-mono">2012 – 2013</div>
           </div>
-          <a href="https://www.huddle.com" target="_blank" class="text-xs font-semibold tracking-widest uppercase text-[#0089D0] hover:opacity-80 transition-opacity duration-150 mb-3 block">Huddle</a>
+          <a href="https://www.huddle.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#0089D0] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Huddle<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
           <p class="text-sm text-[#93908B] leading-relaxed">Designed core functionality and new features for an enterprise document collaboration platform across web and mobile, partnering with research and engineering from concept through delivery.</p>
         </div>
       </div>
 
-      <div class="pt-4">
-        <a href="https://www.linkedin.com/in/peter--thomas" target="_blank" class="text-sm text-[#93908B] hover:text-navy transition-colors duration-150">Full profile on LinkedIn →</a>
+      <div class="mt-8 ml-14">
+        <a href="https://www.linkedin.com/in/peter--thomas" target="_blank" class="text-sm text-[#93908B] hover:text-navy transition-colors duration-150">Full profile on LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="inline-block w-3 h-3 align-middle"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
       </div>
 
     </div>
@@ -195,6 +203,133 @@
       <a href="mailto:contact.petethomas@gmail.com" class="hover:text-navy transition-colors duration-150">contact.petethomas@gmail.com</a>
     </div>
   </footer>
+
+  <script is:inline>
+    (function () {
+      const canvas = document.getElementById('blob');
+      const gl = canvas.getContext('webgl', { alpha: true })
+               || canvas.getContext('experimental-webgl', { alpha: true });
+      if (!gl) return;
+
+      const vert = `
+        attribute vec2 a_pos;
+        void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
+      `;
+
+      const frag = `
+        precision mediump float;
+        uniform float u_time;
+        uniform vec2  u_res;
+
+        vec3 permute(vec3 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
+        float snoise(vec2 v) {
+          const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+                             -0.577350269189626, 0.024390243902439);
+          vec2 i  = floor(v + dot(v, C.yy));
+          vec2 x0 = v - i + dot(i, C.xx);
+          vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+          vec4 x12 = x0.xyxy + C.xxzz;
+          x12.xy -= i1;
+          i = mod(i, 289.0);
+          vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0))
+                         + i.x + vec3(0.0, i1.x, 1.0));
+          vec3 m = max(0.5 - vec3(dot(x0, x0), dot(x12.xy, x12.xy),
+                                  dot(x12.zw, x12.zw)), 0.0);
+          m = m * m; m = m * m;
+          vec3 x = 2.0 * fract(p * C.www) - 1.0;
+          vec3 h = abs(x) - 0.5;
+          vec3 a0 = x - floor(x + 0.5);
+          m *= 1.79284291400159 - 0.85373472095314 * (a0 * a0 + h * h);
+          vec3 g;
+          g.x  = a0.x  * x0.x   + h.x  * x0.y;
+          g.yz = a0.yz * x12.xz  + h.yz * x12.yw;
+          return 130.0 * dot(m, g);
+        }
+
+        // Smooth minimum — blends two distances so blobs merge organically
+        float smin(float a, float b, float k) {
+          float h = clamp(0.5 + 0.5 * (b - a) / k, 0.0, 1.0);
+          return mix(b, a, h) - k * h * (1.0 - h);
+        }
+
+        void main() {
+          vec2 uv = gl_FragCoord.xy / u_res;
+          vec2 p  = (uv - 0.5) * 2.0;
+
+          vec2 c1 = vec2(
+            snoise(vec2(u_time * 0.30, 0.0))  * 0.38,
+            snoise(vec2(0.0, u_time * 0.25))  * 0.38
+          );
+          vec2 c2 = vec2(
+            snoise(vec2(u_time * 0.22, 3.7))  * 0.38,
+            snoise(vec2(3.7, u_time * 0.18))  * 0.38
+          );
+          vec2 c3 = vec2(
+            snoise(vec2(u_time * 0.18, 7.3))  * 0.38,
+            snoise(vec2(7.3, u_time * 0.28))  * 0.38
+          );
+
+          float d1 = length(p - c1) - 0.42;
+          float d2 = length(p - c2) - 0.36;
+          float d3 = length(p - c3) - 0.30;
+
+          float d  = smin(smin(d1, d2, 0.3), d3, 0.3);
+          float alpha = smoothstep(0.18, -0.05, d);
+
+          // Slow independent opacity drift per blob
+          float o1 = 0.75 + 0.10 * snoise(vec2(u_time * 0.18, 0.0));
+          float o2 = 0.90 + 0.10 * snoise(vec2(u_time * 0.14, 5.1));
+          float o3 = 0.60 + 0.10 * snoise(vec2(u_time * 0.21, 9.7));
+
+          // Weight each blob's opacity by how much it contributes at this pixel
+          float w1 = smoothstep(0.18, -0.05, d1);
+          float w2 = smoothstep(0.18, -0.05, d2);
+          float w3 = smoothstep(0.18, -0.05, d3);
+          float wTotal = w1 + w2 + w3 + 0.0001;
+          float opacity = (w1 * o1 + w2 * o2 + w3 * o3) / wTotal;
+
+          vec3 col = vec3(0.255, 0.216, 1.0);
+          gl_FragColor = vec4(col, alpha * opacity);
+        }
+      `;
+
+      function makeShader(type, src) {
+        const s = gl.createShader(type);
+        gl.shaderSource(s, src); gl.compileShader(s); return s;
+      }
+      const prog = gl.createProgram();
+      gl.attachShader(prog, makeShader(gl.VERTEX_SHADER, vert));
+      gl.attachShader(prog, makeShader(gl.FRAGMENT_SHADER, frag));
+      gl.linkProgram(prog); gl.useProgram(prog);
+
+      const buf = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+      gl.bufferData(gl.ARRAY_BUFFER,
+        new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+      const pos = gl.getAttribLocation(prog, 'a_pos');
+      gl.enableVertexAttribArray(pos);
+      gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+
+      const uTime = gl.getUniformLocation(prog, 'u_time');
+      const uRes  = gl.getUniformLocation(prog, 'u_res');
+
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+      gl.clearColor(0, 0, 0, 0);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.uniform2f(uRes, canvas.width, canvas.height);
+
+      let t0 = null;
+      function frame(ts) {
+        if (!t0) t0 = ts;
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.uniform1f(uTime, (ts - t0) * 0.001);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
 
   <script is:inline>
     const toggle = document.getElementById('theme-toggle');
