@@ -19,7 +19,7 @@
           colors: {
             bg:    '#FFFFFF',
             ink:   '#1A1A1A',
-            muted: '#93908B',
+            muted: '#5A5755',
             rule:  '#DAD9D2',
             navy:  '#5B50FF',
           },
@@ -42,6 +42,7 @@
     .cta-title  { font-size: clamp(1.6rem, 3vw, 2.4rem); letter-spacing: -0.02em; }
     a { text-decoration: none; }
     .animate-ping { animation-duration: 2s; }
+    .dark [class*="text-[#5A5755]"] { color: #93908B; }
   </style>
 </head>
 <body class="bg-[#f2f2f2] dark:bg-[#141413] text-[#1A1A1A] dark:text-[#D4D4D0] font-sans antialiased transition-colors duration-200">
@@ -52,12 +53,12 @@
       <canvas id="blob" width="60" height="60" class="shrink-0" style="width:26px;height:26px"></canvas>
       Peter Thomas
     </span>
-    <div class="flex items-center gap-6 md:gap-8 text-sm text-[#93908B]">
-      <a href="#about"      class="hidden md:block hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-150">About</a>
-      <a href="#experience" class="hidden md:block hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-150">Experience</a>
-      <a href="mailto:contact.petethomas@gmail.com" class="group/hello inline-flex items-center gap-1.5 hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-150">Say hello<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-3.5 h-3.5 opacity-0 group-hover/hello:opacity-100 transition-opacity duration-150"><path d="M220.17,100,202.86,70a28,28,0,0,0-38.24-10.25,27.69,27.69,0,0,0-9,8.34L138.2,38a28,28,0,0,0-48.48,0A28,28,0,0,0,48.15,74l1.59,2.76A27.67,27.67,0,0,0,38,80.41a28,28,0,0,0-10.24,38.25l40,69.32a87.47,87.47,0,0,0,53.43,41,88.56,88.56,0,0,0,22.92,3,88,88,0,0,0,76.06-132Zm-6.66,62.64A72,72,0,0,1,81.62,180l-40-69.32a12,12,0,0,1,20.78-12L81.63,132a8,8,0,1,0,13.85-8L62,66A12,12,0,1,1,82.78,54L114,108a8,8,0,1,0,13.85-8L103.57,58h0a12,12,0,1,1,20.78-12l33.42,57.9a48,48,0,0,0-5.54,60.6,8,8,0,0,0,13.24-9A32,32,0,0,1,172.78,112a8,8,0,0,0,2.13-10.4L168.23,90A12,12,0,1,1,189,78l17.31,30A71.56,71.56,0,0,1,213.51,162.62ZM184.25,31.71A8,8,0,0,1,194,26a59.62,59.62,0,0,1,36.53,28l.33.57a8,8,0,1,1-13.85,8l-.33-.57a43.67,43.67,0,0,0-26.8-20.5A8,8,0,0,1,184.25,31.71ZM80.89,237a8,8,0,0,1-11.23,1.33A119.56,119.56,0,0,1,40.06,204a8,8,0,0,1,13.86-8,103.67,103.67,0,0,0,25.64,29.72A8,8,0,0,1,80.89,237Z"/></svg></a>
+    <div class="flex items-center gap-6 md:gap-8 text-sm text-[#5A5755]">
+      <a href="#about"      class="hidden md:block hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-200 ease-out">About</a>
+      <a href="#experience" class="hidden md:block hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-200 ease-out">Experience</a>
+      <a href="mailto:contact.petethomas@gmail.com" class="group/hello inline-flex items-center gap-1.5 hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 transition-colors duration-200 ease-out">Say hello<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-3.5 h-3.5 opacity-0 group-hover/hello:opacity-100 transition-opacity duration-200 ease-out"><path d="M220.17,100,202.86,70a28,28,0,0,0-38.24-10.25,27.69,27.69,0,0,0-9,8.34L138.2,38a28,28,0,0,0-48.48,0A28,28,0,0,0,48.15,74l1.59,2.76A27.67,27.67,0,0,0,38,80.41a28,28,0,0,0-10.24,38.25l40,69.32a87.47,87.47,0,0,0,53.43,41,88.56,88.56,0,0,0,22.92,3,88,88,0,0,0,76.06-132Zm-6.66,62.64A72,72,0,0,1,81.62,180l-40-69.32a12,12,0,0,1,20.78-12L81.63,132a8,8,0,1,0,13.85-8L62,66A12,12,0,1,1,82.78,54L114,108a8,8,0,1,0,13.85-8L103.57,58h0a12,12,0,1,1,20.78-12l33.42,57.9a48,48,0,0,0-5.54,60.6,8,8,0,0,0,13.24-9A32,32,0,0,1,172.78,112a8,8,0,0,0,2.13-10.4L168.23,90A12,12,0,1,1,189,78l17.31,30A71.56,71.56,0,0,1,213.51,162.62ZM184.25,31.71A8,8,0,0,1,194,26a59.62,59.62,0,0,1,36.53,28l.33.57a8,8,0,1,1-13.85,8l-.33-.57a43.67,43.67,0,0,0-26.8-20.5A8,8,0,0,1,184.25,31.71ZM80.89,237a8,8,0,0,1-11.23,1.33A119.56,119.56,0,0,1,40.06,204a8,8,0,0,1,13.86-8,103.67,103.67,0,0,0,25.64,29.72A8,8,0,0,1,80.89,237Z"/></svg></a>
       <!-- Theme toggle -->
-      <button id="theme-toggle" aria-label="Toggle dark mode" class="w-7 h-7 flex items-center justify-center rounded-full hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] transition-colors duration-150">
+      <button id="theme-toggle" aria-label="Toggle dark mode" class="w-7 h-7 flex items-center justify-center rounded-full hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] transition-colors duration-200 ease-out">
         <!-- Sun (shown in dark mode) -->
         <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-4 h-4 hidden">
           <path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z" />
@@ -72,12 +73,12 @@
 
   <!-- Hero -->
   <div class="pt-20 pb-24 px-6 md:px-12 max-w-5xl">
-    <p class="text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-7 inline-flex items-center gap-1.5">Design leader · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-3 h-3 shrink-0"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.63,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg>London</p>
+    <p class="text-xs font-normal font-mono tracking-widest uppercase text-[#5A5755] mb-7 inline-flex items-center gap-1.5">Design leader · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-3 h-3 shrink-0"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.63,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg>London</p>
     <h1 class="hero-title font-semibold mb-9">
       Building teams that do<br>their <span class="text-navy">best work.</span>
     </h1>
-    <p class="text-lg leading-relaxed text-[#93908B] max-w-xl">
-      Director of Product Design at <a href="https://www.cloudflare.com/" target="_blank" class="text-[#ff5e1f] hover:opacity-80 transition-opacity duration-150">Cloudflare</a>. 15+ years designing complex technical products and the organisations that build them. Currently moving designers from AI-curious to AI-native.
+    <p class="text-lg leading-relaxed text-[#5A5755] max-w-xl">
+      Director of Product Design at <a href="https://www.cloudflare.com/" target="_blank" class="text-[#ff5e1f] hover:opacity-80 transition-opacity duration-200 ease-out">Cloudflare</a>. 15+ years designing complex technical products and the organisations that build them. Currently moving designers from AI-curious to AI-native.
     </p>
   </div>
 
@@ -85,18 +86,18 @@
 
   <!-- About -->
   <section id="about" class="py-20 px-6 md:px-12">
-    <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-10">About</span>
+    <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#5A5755] mb-10">About</span>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl">
 
       <div class="space-y-5 text-base leading-loose">
-        <p>I've spent 8 years at <a href="https://www.cloudflare.com" target="_blank" class="text-[#ff5e1f] hover:opacity-80 transition-opacity duration-150">Cloudflare</a> growing from Lead Designer to Director, long enough to have built products, built teams, and figured out what actually makes design organisations work. Currently directing design across Security and Performance products, most recently moving designer from AI-curious to AI-native, helping build the processes and culture to get the whole team shipping with AI-assisted workflows.</p>
-        <p>Before Cloudflare I spent nearly 5 years at <a href="https://www.geckoboard.com/" target="_blank" class="text-[#1a7a2e] hover:opacity-80 transition-opacity duration-150">Geckoboard</a>, joining as the sole designer and building the design function at a SaaS dashboarding tool used by thousands of businesses. Prior to that, product design at <a href="https://www.huddle.com" target="_blank" class="text-[#0089D0] hover:opacity-80 transition-opacity duration-150">Huddle</a> an enterprise document collaboration platform where I developed a strong foundation in end-to-end product design.</p>
+        <p>I've spent 8 years at <a href="https://www.cloudflare.com" target="_blank" class="text-[#ff5e1f] hover:opacity-80 transition-opacity duration-200 ease-out">Cloudflare</a> growing from Lead Designer to Director, long enough to have built products, built teams, and figured out what actually makes design organisations work. Currently directing design across Security and Performance products, most recently moving designer from AI-curious to AI-native, helping build the processes and culture to get the whole team shipping with AI-assisted workflows.</p>
+        <p>Before Cloudflare I spent nearly 5 years at <a href="https://www.geckoboard.com/" target="_blank" class="text-[#1a7a2e] hover:opacity-80 transition-opacity duration-200 ease-out">Geckoboard</a>, joining as the sole designer and building the design function at a SaaS dashboarding tool used by thousands of businesses. Prior to that, product design at <a href="https://www.huddle.com" target="_blank" class="text-[#0089D0] hover:opacity-80 transition-opacity duration-200 ease-out">Huddle</a> an enterprise document collaboration platform where I developed a strong foundation in end-to-end product design.</p>
         <p>I'm passionate about building high-performing design teams and creating the conditions for designers to do their best work.</p>
       </div>
 
       <div class="pt-1 space-y-10">
         <div>
-          <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-3.5">Currently thinking about</span>
+          <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#5A5755] mb-3.5">Currently thinking about</span>
           <ul class="space-y-1 text-sm leading-loose list-none">
             <li>AI-native design workflows</li>
             <li>Building curious, high-trust teams</li>
@@ -105,7 +106,7 @@
           </ul>
         </div>
         <div>
-          <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-3.5">Principles</span>
+          <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#5A5755] mb-3.5">Principles</span>
           <p class="text-sm leading-relaxed mb-2.5">Great design comes from curious people working on genuinely hard problems together.</p>
           <p class="text-sm leading-relaxed">Design teams earn trust through delivery, and that trust, over time, opens the doors that matter.</p>
         </div>
@@ -118,7 +119,7 @@
 
   <!-- Experience -->
   <section id="experience" class="py-20 px-6 md:px-12">
-    <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#93908B] mb-10">Experience</span>
+    <span class="block text-xs font-normal font-mono tracking-widest uppercase text-[#5A5755] mb-10">Experience</span>
     <div class="max-w-5xl">
 
       <div class="flex gap-6">
@@ -131,10 +132,10 @@
         <div class="flex-1 min-w-0 pb-8">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Director of Product Design</div>
-            <div class="text-xs text-[#93908B] shrink-0 font-mono">2025 – Present</div>
+            <div class="text-xs text-[#5A5755] shrink-0 font-mono">2025 – Present</div>
           </div>
-          <a href="https://www.cloudflare.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#ff5e1f] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Cloudflare<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
-          <p class="text-sm text-[#93908B] leading-relaxed">Leading design across Security and Performance, Cloudflare's highest-revenue portfolio. A global team of 11, VP-level partnerships, and an organisation-wide shift to AI-native design practice.</p>
+          <a href="https://www.cloudflare.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#ff5e1f] hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-2 py-0.5 -mx-2 transition-all duration-200 ease-out mb-3 inline-flex items-center gap-1">Cloudflare<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200 ease-out"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p class="text-sm text-[#5A5755] leading-relaxed">Leading design across Security and Performance, Cloudflare's highest-revenue portfolio. A global team of 11, VP-level partnerships, and an organisation-wide shift to AI-native design practice.</p>
         </div>
       </div>
 
@@ -148,10 +149,10 @@
         <div class="flex-1 min-w-0 pb-8">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Design Lead <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="inline-block w-3 h-3 align-middle"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg> Senior Design Manager</div>
-            <div class="text-xs text-[#93908B] shrink-0 font-mono">2019 – 2025</div>
+            <div class="text-xs text-[#5A5755] shrink-0 font-mono">2019 – 2025</div>
           </div>
-          <a href="https://www.cloudflare.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#ff5e1f] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Cloudflare<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
-          <p class="text-sm text-[#93908B] leading-relaxed">Built and scaled the London design team from the ground up. Led design across Security, Performance, and Analytics. Shipped the WAF redesign, Firewall Events, and Analytics platforms from 0–1.</p>
+          <a href="https://www.cloudflare.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#ff5e1f] hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-2 py-0.5 -mx-2 transition-all duration-200 ease-out mb-3 inline-flex items-center gap-1">Cloudflare<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200 ease-out"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p class="text-sm text-[#5A5755] leading-relaxed">Built and scaled the London design team from the ground up. Led design across Security, Performance, and Analytics. Shipped the WAF redesign, Firewall Events, and Analytics platforms from 0–1.</p>
         </div>
       </div>
 
@@ -165,10 +166,10 @@
         <div class="flex-1 min-w-0 pb-8">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Product Design Lead</div>
-            <div class="text-xs text-[#93908B] shrink-0 font-mono">2013 – 2018</div>
+            <div class="text-xs text-[#5A5755] shrink-0 font-mono">2013 – 2018</div>
           </div>
-          <a href="https://www.geckoboard.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#1a7a2e] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Geckoboard<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
-          <p class="text-sm text-[#93908B] leading-relaxed">Joined as the sole designer and shaped the design function over 4.5 years at a SaaS dashboarding tool used by thousands of businesses. Owned end-to-end product design across web and mobile.</p>
+          <a href="https://www.geckoboard.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#1a7a2e] hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-2 py-0.5 -mx-2 transition-all duration-200 ease-out mb-3 inline-flex items-center gap-1">Geckoboard<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200 ease-out"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p class="text-sm text-[#5A5755] leading-relaxed">Joined as the sole designer and shaped the design function over 4.5 years at a SaaS dashboarding tool used by thousands of businesses. Owned end-to-end product design across web and mobile.</p>
         </div>
       </div>
 
@@ -181,15 +182,15 @@
         <div class="flex-1 min-w-0 pb-4">
           <div class="flex items-baseline justify-between gap-4 mb-1">
             <div class="text-base font-semibold leading-snug">Product Designer</div>
-            <div class="text-xs text-[#93908B] shrink-0 font-mono">2012 – 2013</div>
+            <div class="text-xs text-[#5A5755] shrink-0 font-mono">2012 – 2013</div>
           </div>
-          <a href="https://www.huddle.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#0089D0] hover:opacity-80 transition-opacity duration-150 mb-3 inline-flex items-center gap-1">Huddle<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
-          <p class="text-sm text-[#93908B] leading-relaxed">Designed core functionality and new features for an enterprise document collaboration platform across web and mobile, partnering with research and engineering from concept through delivery.</p>
+          <a href="https://www.huddle.com" target="_blank" class="group/link text-xs font-semibold tracking-widest uppercase text-[#0089D0] hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-2 py-0.5 -mx-2 transition-all duration-200 ease-out mb-3 inline-flex items-center gap-1">Huddle<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200 ease-out"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p class="text-sm text-[#5A5755] leading-relaxed">Designed core functionality and new features for an enterprise document collaboration platform across web and mobile, partnering with research and engineering from concept through delivery.</p>
         </div>
       </div>
 
       <div class="mt-8 ml-14">
-        <a href="https://www.linkedin.com/in/peter--thomas" target="_blank" class="text-sm text-[#93908B] hover:text-navy transition-colors duration-150">Full profile on LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="inline-block w-3 h-3 align-middle"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="https://www.linkedin.com/in/peter--thomas" target="_blank" class="text-sm text-[#5A5755] hover:text-navy hover:bg-[#e5e5e5] dark:hover:bg-[#1c1c1b] rounded-full px-3 py-1 -mx-3 inline-flex items-center gap-1 transition-all duration-200 ease-out">Full profile on LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="inline-block w-3 h-3 align-middle"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
       </div>
 
     </div>
@@ -197,10 +198,10 @@
 
   <!-- Footer -->
   <footer class="border-t border-[#DAD9D2] dark:border-[#2A2A28] py-7 px-6 md:px-12 flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-0">
-    <span class="text-xs text-[#93908B]">© Peter Thomas 2026</span>
-    <div class="flex gap-6 text-xs text-[#93908B]">
-      <a href="https://www.linkedin.com/in/peter--thomas" target="_blank" class="hover:text-navy transition-colors duration-150">LinkedIn</a>
-      <a href="mailto:contact.petethomas@gmail.com" class="hover:text-navy transition-colors duration-150">contact.petethomas@gmail.com</a>
+    <span class="text-xs text-[#5A5755]">© Peter Thomas 2026</span>
+    <div class="flex gap-6 text-xs text-[#5A5755]">
+      <a href="https://www.linkedin.com/in/peter--thomas" target="_blank" class="hover:text-navy transition-colors duration-200 ease-out">LinkedIn</a>
+      <a href="mailto:contact.petethomas@gmail.com" class="hover:text-navy transition-colors duration-200 ease-out">contact.petethomas@gmail.com</a>
     </div>
   </footer>
 
