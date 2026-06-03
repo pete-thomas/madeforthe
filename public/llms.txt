@@ -1,0 +1,42 @@
+# Peter Thomas
+
+> Director of Product Design at Cloudflare. Design leader with 15+ years experience building complex technical products and the teams that make them.
+
+## About
+
+Peter Thomas is a London-based Director of Product Design at Cloudflare, where he leads design across Security and Performance — Cloudflare's highest-revenue product portfolio. He manages a global team of 11 designers and works at VP level to shape product and design strategy.
+
+He has spent 8 years at Cloudflare, growing from Lead Designer to Director. Prior to his current role, he built and scaled the London design team from the ground up, shipping products including the WAF redesign, Firewall Events, and Analytics platforms.
+
+Before Cloudflare, Peter spent nearly 5 years at Geckoboard as the sole designer, building out the design function at a SaaS dashboarding tool used by thousands of businesses. Earlier, he worked at Huddle on enterprise document collaboration.
+
+He is currently focused on moving design teams from AI-curious to AI-native — building the processes and culture to ship with AI-assisted workflows.
+
+## Current role
+
+- **Title:** Director of Product Design
+- **Company:** Cloudflare
+- **Location:** London, United Kingdom
+- **Since:** 2025
+
+## Experience
+
+- Director of Product Design, Cloudflare (2025–present)
+- Senior Design Manager, Cloudflare (2022–2025)
+- Design Lead, Cloudflare (2019–2022)
+- Product Design Lead, Geckoboard (2013–2018)
+- Product Designer, Huddle (2012–2013)
+
+## Interests
+
+- AI-native design workflows
+- Building curious, high-trust design teams
+- Design in complex technical products
+- How AI changes the shape of design practice
+
+## Contact
+
+- Email: contact.petethomas@gmail.com
+- LinkedIn: https://www.linkedin.com/in/peter--thomas
+- Website: https://madeforthe.net
+- CV: https://cv.madeforthe.net

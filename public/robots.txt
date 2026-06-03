@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# AI agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
